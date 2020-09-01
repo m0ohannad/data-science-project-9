@@ -1,0 +1,22 @@
+CREATE TABLE data_input
+(
+id INT UNIQUE ,
+review VARCHAR ,
+date TIMESTAMP UNIQUE DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE data_labeling
+(
+review_id INT UNIQUE ,
+label_id INT ,
+timestamp TIMESTAMP UNIQUE DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE label_types
+(
+label_id INT UNIQUE ,
+Label_name VARCHAR ,
+Comments VARCHAR
+);
